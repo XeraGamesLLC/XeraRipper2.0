@@ -302,6 +302,15 @@ namespace AssetRipper.Export.UnityProjects
 				projectExporter.OverrideExporter<IGameObject>(glbModelExporter);
 				projectExporter.OverrideExporter<ILevelGameManager>(glbModelExporter);
 			}
+			else if (Settings.MeshExportFormat == MeshExportFormat.Fbx)
+			{
+				// FBX mode: Export regular meshes to GLB format, keep skinned meshes in native format
+				projectExporter.OverrideExporter<IMesh>(new FbxMeshExporter());
+				FbxModelExporter fbxModelExporter = new();
+				projectExporter.OverrideExporter<IComponent>(fbxModelExporter);
+				projectExporter.OverrideExporter<IGameObject>(fbxModelExporter);
+				projectExporter.OverrideExporter<ILevelGameManager>(fbxModelExporter);
+			}
 
 			//Terrain and NavMesh exporters
 			switch (Settings.TerrainExportMode)

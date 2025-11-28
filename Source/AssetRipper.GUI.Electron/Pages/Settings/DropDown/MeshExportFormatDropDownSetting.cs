@@ -13,6 +13,7 @@ public sealed class MeshExportFormatDropDownSetting : DropDownSetting<MeshExport
 	{
 		MeshExportFormat.Native => Localization.MeshFormatNative,
 		MeshExportFormat.Glb => Localization.MeshFormatGlb,
+		MeshExportFormat.Fbx => Localization.MeshFormatFbx,
 		_ => base.GetDisplayName(value),
 	};
 
@@ -20,6 +21,7 @@ public sealed class MeshExportFormatDropDownSetting : DropDownSetting<MeshExport
 	{
 		MeshExportFormat.Native => Localization.MeshFormatNativeDescription,
 		MeshExportFormat.Glb => Localization.MeshFormatGlbDescription,
+		MeshExportFormat.Fbx => Localization.MeshFormatFbxDescription,
 		_ => base.GetDescription(value),
 	};
 }
