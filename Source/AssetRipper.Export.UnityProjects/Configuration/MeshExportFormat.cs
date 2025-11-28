@@ -10,5 +10,9 @@
 		/// An opensource alternative to FBX. It is the binary version of GLTF. Unity does not support importing this format.
 		/// </summary>
 		Glb,
+		/// <summary>
+		/// Exports regular meshes to GLB format (FBX alternative) while keeping skinned meshes in native format for better compatibility.
+		/// </summary>
+		Fbx,
 	}
 }

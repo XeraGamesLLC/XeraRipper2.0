@@ -606,15 +606,25 @@ partial class Localization
 	public static string MeshExportTitle => Get("mesh_export_title");
 	
 	/// <summary>
+	/// FBX (Smart Export)
+	/// </summary>
+	public static string MeshFormatFbx => Get("mesh_format_fbx");
+
+	/// <summary>
+	/// Exports regular meshes to GLB format (high-quality FBX alternative) while keeping skinned meshes in native YAML format for better compatibility with bone/skeleton data.
+	/// </summary>
+	public static string MeshFormatFbxDescription => Get("mesh_format_fbx_description");
+
+	/// <summary>
 	/// GLB
 	/// </summary>
 	public static string MeshFormatGlb => Get("mesh_format_glb");
-	
+
 	/// <summary>
 	/// A high-quality, open-source alternative to FBX. Binary version of GLTF. Only contains mesh data. Can cause errors. Unity cannot import assets of this type.
 	/// </summary>
 	public static string MeshFormatGlbDescription => Get("mesh_format_glb_description");
-	
+
 	/// <summary>
 	/// Yaml
 	/// </summary>
